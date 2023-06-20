@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- control bar like ios simulator  -->
+      <div class="top_bar">
+        <div id="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="middle_layer">
+          <h4>iPhone 13 Pro</h4>
+          <p>iOS 16.5</p>
+        </div>
+        <div id="right_buttons">
+          <span
+            ><img class="record_icon" src="images/record_icon.png" alt=""
+          /></span>
+          <span
+            ><img class="home_icon" src="images/icons8-home-32.png" alt=""
+          /></span>
+          <span
+            ><img class="rotate_icon" src="images/rotate_icon.png" alt="" />
+          </span>
+        </div>
+      </div>
+
+      <!-- nav/notification bar -->
+      <div class="Ipn_converter">
+        <nav class="nav">
+          <div class="clock">
+            <p>5:52</p>
+          </div>
+          <div class="right_section">
+            <img class="network_icon spc" src="images/network_ios.png" alt="" />
+            <img class="wifi_icon spc" src="images/wifi_ios.png" alt="" />
+            <img class="spc" src="images/battery_icon.png" alt="" />
+          </div>
+        </nav>
+
+        <!-- notch -->
+        <div class="notch"></div>
+
+        <div class="user_section">
+          <div class="back">
+            <a href="#"><img src="images/backarrow.png" alt="" /></a>
+          </div>
+          <div id="heading">
+            <h2>Converters</h2>
+          </div>
+          <div class="user_login">
+            <a href="#"><img src="images/users.png" alt="" /></a>
+          </div>
+        </div>
+
+        <!-- main content starts -->
+        <div class="main-body">
+          <h1>Currency Converter</h1>
+          <div class="input_data">
+            <p>Enter Amount</p>
+            <input type="number" id="amt" />
+          </div>
+
+          <!-- drop down section starts from here -->
+          <div class="dropdown">
+            <div class="currency_from">
+              <p>From</p>
+              <div class="select_box">
+                <img src="https://flagsapi.com/IN/flat/64.png" />
+                <select id="from">
+                  <option value="INR">INR</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="CAD">CAD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="CHF">CHF</option>
+                  <option value="CNY">CNY</option>
+                  <option value="NZD">NZD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="SEK">SEK</option>
+                </select>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+            <div class="currency_to">
+              <p>To</p>
+              <div class="select_box">
+                <img src="https://flagsapi.com/US/flat/64.png" />
+                <select id="to">
+                  <option value="INR">INR</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="CAD">CAD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="CHF">CHF</option>
+                  <option value="CNY">CNY</option>
+                  <option value="NZD">NZD</option>
+                  <option value="GBP">GBP</option>
+                  <option value="SEK">SEK</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button class="convert_button" onclick="convertAmt()">Convert</button>
+          <p class="final_output">Amount</p>
+          <div class="output">
+            <input
+              type="text"
+              id="convertedAmt"
+              placeholder="Converted Amount"
+              disabled
+            />
+          </div>
+        </div>
+
+        <!-- Bottom navigator bar -->
+        <div class="bottom_footer">
+          <div class="home horizontal">
+            <a href="#"><img src="images/homeicon2.png" alt="" /></a>
+            <p>home</p>
+          </div>
+          <div class="search horizontal">
+            <a href="#"><img src="images/serach.png" alt="" /></a>
+            <p>search</p>
+          </div>
+          <div class="search horizontal">
+            <a href="#"><img src="images/iosstopwatch.png" alt="" /></a>
+            <p>time</p>
+          </div>
+          <div class="home horizontal">
+            <a href="#"><img src="images/setting.png" alt="" /></a>
+            <p>setting</p>
+          </div>
+        </div>
+
+        <!-- horizontal bar like ios -->
+        <hr />
+      </div>
+    </div>
+
+    <!-- adding fonts icon  -->
+    <script
+      src="https://kit.fontawesome.com/a29b5726fa.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- adding javascript  -->
+    <script src="country_list.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
